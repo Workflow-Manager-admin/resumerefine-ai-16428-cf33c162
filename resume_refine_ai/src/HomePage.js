@@ -44,8 +44,21 @@ function HomePage() {
         <button
           className="btn btn-large home-cta"
           onClick={() => navigate("/signin")}
+          style={{
+            marginTop: 18,
+            borderRadius: 8,
+            fontWeight: 700,
+            fontSize: "1.18rem",
+            letterSpacing: "0.02em",
+            minWidth: 160,
+            boxShadow: "0 4px 26px 0 rgba(255,106,61,0.25)",
+            background: "linear-gradient(90deg, var(--brand-accent), var(--brand-secondary) 80%)",
+            transition: "background 0.2s, box-shadow 0.19s",
+            border: "none",
+            outline: "none"
+          }}
         >
-          Get Started / Sign In
+          Sign In
         </button>
       </div>
     </div>
