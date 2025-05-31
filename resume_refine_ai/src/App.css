@@ -112,90 +112,112 @@ body {
   justify-content: space-between;
 }
 
-/* HOME PAGE */
+/* =========================================
+   Home Page - Hero Panel
+   ========================================= */
 .home-background {
   min-height: 100vh;
   width: 100vw;
-  background: #21252b;
+  background: linear-gradient(120deg, #21252b 0%, #20203a 75%, #191933 100%);
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow-x: hidden;
+}
+.home-background::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  /* Decorative overlay: grid dots or shade */
+  background: radial-gradient(circle, rgba(255,106,61,0.08) 15%, transparent 95%) 2% 5%/220px 140px repeat;
 }
 
 .home-hero-content {
-  background: #232332;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px 0 rgba(20,30,50,0.13);
-  padding: 2.5rem 2rem;
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 6px 38px 0 rgba(20,30,50,0.15), 0 2px 11px 0 rgba(25, 25, 51, 0.04);
+  padding: 2.8rem 1.4rem 2.2rem 1.4rem;
   text-align: center;
-  max-width: 380px;
-  width: 97vw;
+  max-width: 440px;
+  width: 96vw;
+  margin: 0 auto;
+  z-index: 1;
 }
 
 .home-logo {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--kavia-orange);
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--brand-accent);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  justify-content: center;
 }
-
 .home-logo-symbol {
-  font-size: 1.6rem;
-  color: var(--kavia-orange);
-  margin-right: 3px;
+  font-size: 1.7rem;
+  color: var(--brand-accent);
+  margin-right: 4px;
 }
 
 .home-title {
-  font-size: 2rem;
+  font-size: 2.15rem;
   font-weight: 700;
-  margin: 20px 0 12px 0;
+  margin: 22px 0 15px 0;
   color: var(--text-color);
 }
-
 .home-accent {
-  color: var(--kavia-orange);
+  color: var(--brand-accent);
 }
 
 .home-ai-span {
-  color: var(--kavia-orange);
+  color: var(--brand-accent);
   font-weight: 700;
 }
 
 /* Minimal home description */
 .home-description {
-  font-size: 1rem;
-  margin-bottom: 18px;
+  font-size: 1.09rem;
+  margin-bottom: 1.3em;
   color: var(--text-secondary);
+  line-height: 1.5;
+  max-width: 340px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .home-cta {
-  background: var(--kavia-orange);
+  background: linear-gradient(90deg, var(--brand-accent) 0%, var(--brand-secondary) 90%);
   color: #fff;
-  font-size: 1.07rem;
-  font-weight: 600;
-  border-radius: 6px;
+  font-size: 1.14rem;
+  font-weight: 700;
+  border-radius: 8px;
   border: none;
-  box-shadow: none;
+  box-shadow: 0 4px 26px 0 rgba(255,106,61,0.21);
   outline: none;
-  padding: 10px 24px;
+  padding: 12px 34px;
   margin: 0 auto;
   cursor: pointer;
+  letter-spacing: 0.02em;
+  min-width: 160px;
+  transition: background 0.18s, box-shadow 0.19s, filter 0.16s;
+}
+.home-cta:hover, .home-cta:active, .home-cta:focus {
+  filter: brightness(0.95);
+  background: linear-gradient(90deg, var(--brand-accent) 0%, #e88841 80%);
 }
 
-.home-cta:active,
-.home-cta:focus {
-  background: #d97341;
-}
-
-/* Minimal Nav home button */
-.btn-home-nav {
-  background: var(--kavia-orange);
-  color: #fff;
-  font-weight: 600;
-  border-radius: 6px;
-  border: none;
-  text-decoration: none;
-  padding: 10px 20px;
-  margin-left: 12px;
+/* For mobile: reduce Home title and padding */
+@media (max-width: 480px) {
+  .home-hero-content {
+    padding: 2.13rem 0.6rem 1.13rem 0.6rem;
+    max-width: 98vw;
+  }
+  .home-logo { font-size: 1.17rem; }
+  .home-title { font-size: 1.25rem; }
+  .home-cta { font-size: 0.97rem; padding: 10px 16px; min-width: 110px; }
 }
 
 /* Global button */
