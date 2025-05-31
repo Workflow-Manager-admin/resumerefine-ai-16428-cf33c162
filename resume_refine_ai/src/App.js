@@ -21,10 +21,33 @@ function App() {
               <>
                 <nav className="navbar">
                   <div className="container">
-                    <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
+                    <div style={{
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      alignItems: 'center',
+                      width: '100%'
+                    }}>
                       <div className="logo">
                         <span className="logo-symbol">*</span> KAVIA AI
                       </div>
+                      {/* Home button (only visible on non-home pages) */}
+                      <a
+                        href="/"
+                        className="btn btn-large btn-home-nav"
+                        style={{
+                          marginLeft: '20px',
+                          borderRadius: '7px',
+                          fontWeight: 700,
+                          fontSize: '1.08rem',
+                          background: 'linear-gradient(90deg, var(--brand-secondary), var(--kavia-orange) 70%)',
+                          color: '#fff',
+                          textDecoration: 'none',
+                          padding: '10px 20px',
+                          boxShadow: '0 2px 24px 0 rgba(232,122,65,0.12)'
+                        }}
+                      >
+                        Home
+                      </a>
                     </div>
                   </div>
                 </nav>
