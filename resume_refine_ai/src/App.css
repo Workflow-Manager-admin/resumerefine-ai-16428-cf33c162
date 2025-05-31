@@ -365,3 +365,65 @@ body {
     padding: 0 8px;
   }
 }
+
+/* === MainToolPage "tool-card" and "suggestion-card" styles === */
+.tool-card, .suggestion-card {
+  /* NOOP: Styles overridden inline for modern card styles; this is for future theming */
+}
+
+.tool-input {
+  font-family: inherit;
+  box-sizing: border-box;
+  width: 100%;
+  outline: none;
+  margin: 0;
+  border-radius: 6px;
+  transition: border-color 0.16s;
+  color: var(--text-color);
+  background: rgba(34, 42, 64, 0.93);
+  padding: 10px 13px;
+  font-size: 1rem;
+}
+
+/* Remove webkit number arrows for uniform style */
+.tool-input[type="number"]::-webkit-inner-spin-button, 
+.tool-input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Responsive for the cards */
+@media (max-width: 600px) {
+  .tool-card, .suggestion-card {
+    padding-left: 8vw !important;
+    padding-right: 8vw !important;
+    border-radius: 10px !important;
+  }
+}
+
+/* Hide native file upload button for clean design */
+input[type="file"].tool-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+input[type="file"].tool-input::before {
+  content: 'Choose file';
+  display: inline-block;
+  background: var(--kavia-orange);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 14px;
+  outline: none;
+  white-space: nowrap;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-right: 8px;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+input[type="file"].tool-input:hover::before {
+  background: #FF8B4D;
+}
+
+/* Hide the label on click for accessibility: NOOP—native "Choose file" for now */
+
