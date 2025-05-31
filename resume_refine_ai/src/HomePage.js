@@ -13,26 +13,14 @@ import "./App.css";
 function HomePage() {
   const navigate = useNavigate();
 
-  // Example background image (URL could be replaced with an asset in real deployment)
-  const backgroundImage =
-    "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1500&q=80";
-
   return (
-    <div
-      className="home-background"
-      style={{
-        minHeight: "100vh",
-        minWidth: "100vw",
-        background: `linear-gradient(120deg, rgba(26,34,56,0.88) 70%, rgba(157,170,242, 0.15) 100%), url('${backgroundImage}') center/cover no-repeat fixed`,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
+    <div className="home-background">
       <div className="home-hero-content">
         <div className="home-logo">
           <span className="home-logo-symbol">*</span>{" "}
-          <span>ResumeRefine <span className="home-ai-span">AI</span></span>
+          <span>
+            ResumeRefine <span className="home-ai-span">AI</span>
+          </span>
         </div>
         <h1 className="home-title">
           Refine. <span className="home-accent">Impress.</span> Succeed.
