@@ -109,3 +109,112 @@ body {
   padding: 12px 24px;
   font-size: 1.1rem;
 }
+
+/* ================= HOME PAGE HERO ==================== */
+.home-background {
+  min-height: 100vh;
+  min-width: 100vw;
+  /* background applied inline for dynamic URL, fallback below */
+  background-color: var(--brand-primary, #1A2238);
+  color: var(--text-color, #fff);
+}
+
+.home-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  /* for shadow/glass effect */
+  padding: 48px 32px;
+  border-radius: 24px;
+  max-width: 440px;
+  background: rgba(26, 34, 56, 0.82);
+  box-shadow: 0 8px 48px 0 rgba(20, 30, 50, 0.18);
+  text-align: center;
+}
+
+.home-logo {
+  font-size: 2.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--brand-secondary, #9DAAF2);
+  margin-bottom: 16px;
+  letter-spacing: 0.03em;
+}
+
+.home-logo-symbol {
+  color: var(--brand-accent, #FF6A3D);
+  font-weight: 900;
+  font-size: 2.2rem;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.home-ai-span {
+  color: var(--brand-accent, #FF6A3D);
+  font-weight: 700;
+  margin-left: 4px;
+}
+
+.home-title {
+  color: var(--text-color, #fff);
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin: 0 0 18px 0;
+  letter-spacing: 0.03em;
+  line-height: 1.18;
+}
+
+@media (max-width: 600px) {
+  .home-title {
+    font-size: 2rem;
+  }
+  .home-hero-content {
+    padding: 32px 10px;
+    border-radius: 12px;
+    max-width: 96vw;
+  }
+}
+
+.home-accent {
+  color: var(--brand-accent, #FF6A3D);
+}
+
+.home-description {
+  color: var(--brand-secondary, #9DAAF2);
+  font-size: 1.11rem;
+  opacity: 0.89;
+  margin: 0 0 28px 0;
+  line-height: 1.5;
+}
+
+/* Call-to-action button styling override */
+.home-cta {
+  background: linear-gradient(90deg, var(--brand-accent), var(--brand-secondary) 80%);
+  color: #fff;
+  font-size: 1.13rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: 8px;
+  box-shadow: 0 2px 24px 0 rgba(255,106,61,0.18);
+  border: none;
+  outline: none;
+  margin-top: 8px;
+  cursor: pointer;
+  transition: background 0.21s, box-shadow 0.22s;
+}
+
+.home-cta:hover {
+  background: linear-gradient(90deg, #FF8B4D 65%, var(--brand-secondary) 100%);
+  box-shadow: 0 6px 38px 0 rgba(255, 106, 61, 0.23);
+}
+
+/* Hide default navbar container on homepage (optional) */
+@media (max-width: 850px) {
+  .container {
+    padding: 0 8px;
+  }
+}
