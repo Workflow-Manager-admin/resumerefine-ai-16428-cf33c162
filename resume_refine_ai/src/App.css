@@ -49,31 +49,67 @@ body {
 }
 
 /* Minimal Navbar */
+/* =========================================
+   Navigation Bar & Logo
+   ========================================= */
 .navbar {
   width: 100%;
-  background: var(--kavia-dark);
+  background: var(--brand-primary);
   color: var(--text-color);
-  padding: 1rem 0;
+  padding: 0.8rem 0;
   border-bottom: 1px solid var(--border-color);
+  min-height: 58px;
+  transition: background 0.25s;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
-
 .logo {
   font-weight: bold;
-  color: var(--kavia-orange);
+  color: var(--brand-accent);
+  letter-spacing: 0.01em;
+  font-size: 1.17rem;
+  display: flex;
+  align-items: center;
 }
-
 .logo-symbol {
   color: var(--kavia-orange);
-  margin-right: 6px;
+  margin-right: 5px;
+  font-size: 1.19em;
 }
 
-/* Minimal Container */
+/* Home nav button */
+.btn-home-nav {
+  background: linear-gradient(90deg, var(--brand-secondary), var(--kavia-orange) 70%);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 7px;
+  border: none;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-left: 12px;
+  font-size: 1.08rem;
+  box-shadow: 0 2px 24px 0 rgba(232,122,65,0.12);
+  transition: background 0.17s, box-shadow 0.19s;
+  display: inline-block;
+}
+.btn-home-nav:active,
+.btn-home-nav:focus {
+  background: var(--brand-secondary);
+  color: #fff;
+  outline: 2px solid var(--kavia-orange);
+}
+
+/* Responsive layout for nav content */
 .container {
-  width: 95%;
-  max-width: 840px;
+  width: 97%;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 1.5rem;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* HOME PAGE */
